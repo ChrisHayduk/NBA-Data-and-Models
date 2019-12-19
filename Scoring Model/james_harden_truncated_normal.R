@@ -1,4 +1,6 @@
 library(readxl)
+library(truncdist)
+library(truncnorm)
 
 #Get James Harden scoring stats
 stats <- read_excel("C:\\Users\\chris\\Desktop\\NBA-Data-and-Models\\Scoring Model\\james_harden_2018.xlsx")
@@ -23,4 +25,11 @@ h<-hist(points, breaks=10, col="red", xlab="Points Scored",
 
 lines(x, hx, col="blue", lwd=2)
 
+hx_2 <- dtrunc(x, spec = "t", a=0, df =2)
+
+#Graph histogram vs. estimated density
+h<-hist(points, breaks=10, col="red", xlab="Points Scored",
+        main="Histogram with \n Truncated Normal Curve", freq=FALSE)
+
+lines(x, hx_2, col="blue", lwd=2)
      
