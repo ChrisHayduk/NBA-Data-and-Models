@@ -25,11 +25,10 @@ h<-hist(points, breaks=10, col="red", xlab="Points Scored",
 
 lines(x, hx, col="blue", lwd=2)
 
-hx_2 <- dtrunc(x, spec = "t", a=0, df =2)
+hx_2 <- dtrunc(x, spec = "t", a=0, df =20)
 
 #Graph histogram vs. estimated density
 h<-hist(points, breaks=10, col="red", xlab="Points Scored",
         main="Histogram with \n Truncated Normal Curve", freq=FALSE)
 
 lines(x, hx_2, col="blue", lwd=2)
-     
