@@ -7,7 +7,7 @@ theme.info <- theme(plot.title = element_text(size=16, hjust=0.5),
                     axis.title = element_text(size=14),
                     axis.text = element_text(size=14))
 
-data <- read_excel("C:\\Users\\chris\\Desktop\\NBA-Data-and-Models\\Visualizations\\sportsref_download.xlsx")
+data <- read_excel("C:\\Users\\chris\\Desktop\\NBA-Data-and-Models\\Visualizations\\Points vs TS Scatterplots\\12-11-2019\\sportsref_download.xlsx")
 
 data$PPG <- round(data$PTS/data$G, digits = 3)
 
